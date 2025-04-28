@@ -1,0 +1,10 @@
+global:
+  scrape_interval: 5s
+
+scrape_configs:
+- job_name: 'bad_app'
+  static_configs:
+  - targets: [ 'bad_app:8087' ]
+- job_name: 'good_app'
+  static_configs:
+  - targets: [ 'good_app:8088' ]
